@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<h1>Pontuação do Seu time No Campeonato!</h1>
+<h2>Calcule o total de pontos conquistados pelo seu time!</h2>
+Programa Elaborado como Exercício das Aulas de Lógica de Programação Ministrado pela Platadorma Alura.com.
+<a href="https://cursos.alura.com.br/">Aqui</a>
+<br>
+<br>
+
+<script>
+	
+	function pulaLinha(){
+
+		document.write("<br><br>");
+
+	}
+
+	function imprime(mostra){
+
+		document.write(mostra);
+
+	}
+
+	var nome = prompt("Gostariamos de te conhecer melhor, Qual é o seu nome? ");
+	var time = prompt("Qual é o seu time de coração? ");
+
+
+	var vitorias = parseInt(prompt("Entre com o números de vitórias."));
+	var empates = parseInt(prompt("Entre com o número de empates. "));
+	var pontos = (vitorias * 3 ) + empates;
+
+	imprime("Torcedor: " + nome + "<br>" + "Seu time do coração é o (a): " + time + "<br>" + "Os total de pontos do seu time é de: " + pontos);
+
+</script>

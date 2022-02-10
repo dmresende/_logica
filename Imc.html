@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<h1>Calcule o seu IMC !</h1>
+<h3>Veja se está dentro dos parâmetros de saúde da OMS. </h3>
+<a href="https://www.tuasaude.com/calculadora/imc/">Aqui.</a>
+
+<script>
+
+	alert("Seja bem vindo (a)!");
+	alert("Que tal calcular o seu IMC ? ");
+
+	function imprime(mostra){
+
+		document.write(mostra);
+
+	}
+
+	function pularLinha(){
+
+		document.write("<br><br>");
+	}
+
+	function calculaImc(altura,peso){
+
+		return peso / (altura * altura);		
+
+	}
+
+	/*var imcDouglas = calculaImc(1.68, 90);
+	var imcNatalia = calculaImc(1.72, 83);
+	var totalImc = imcDouglas + imcNatalia;
+	document.write("A soma dos imc's é: " + totalImc);*/
+
+	var nome = prompt("Informe o seu nome: ");
+	alert("Se houver necessidade de separação das medidas use o ' . '   ");
+	var alturaInformada = prompt(nome + " informe a sua altura: ");
+	var pesoInformado = prompt(nome + " Informe o seu peso: ");
+
+	var imc = calculaImc(alturaInformada, pesoInformado)
+
+	pularLinha();
+	imprime(nome + " o  IMC calculado é: " + imc);
+	pularLinha();
+
+	imprime("Obrigado por usar o nosso programa!");
+	
+</script>

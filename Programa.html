@@ -3,8 +3,41 @@
 
 <script>
 
-	document.write("A idade de Natália é " + (2022 - 28) + <br>);
-	document.write("A idade de Douglas é " + (2022 - 31) + <br>);
-	document.write("A idade de Rosana é " + (2022 - 52) + <br>);
+	//não usei a função porque imprimi tudo em um unico comando; por isso criei uma variável;
+	/*function pulaLinha(){
 
+		document.write("<br>");
+			 
+	}*/
+
+	function imprime(mostra){
+
+		document.write(mostra);
+		//pulaLinha();			 
+	}
+
+	function aletar(mensagem){
+
+		alert("Seja Bem Vindo (a)");
+		alert("Ao meu primeiro programa! ");
+		alert("Sinta-se em casa.");
+
+	}
+
+	var pulaLinha = "<br>";
+	var ano = 2022;	
+	var idadeDouglas = ano - 1991;
+	var idadeNatalia = ano - 1994;
+	var idadeSonia = ano - 1969;
+	var media = (idadeDouglas + idadeNatalia + idadeSonia) / 3;
+
+	aletar()
+
+	imprime("Idade de Douglas: " + idadeDouglas + pulaLinha + "Idade de Natália é: " + idadeNatalia + pulaLinha + "Idade de Sônia é :" + idadeSonia + pulaLinha);
+
+	//função que arredonda o valor matemático Math.roud();
+	imprime("A média das idades é: " + Math.round(media)); 
+	
 </script>
+
+
