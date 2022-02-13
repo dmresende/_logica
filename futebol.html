@@ -26,8 +26,29 @@ Programa Elaborado como Exercício das Aulas de Lógica de Programação Ministr
 
 	var vitorias = parseInt(prompt("Entre com o números de vitórias."));
 	var empates = parseInt(prompt("Entre com o número de empates. "));
+	var derrotas = parseInt(prompt("Entre com o número de Derrotas. "));
+
+	var pontosAnosAnterior = parseInt(prompt("Pontuação do seu time no ano anterior? "));
+
 	var pontos = (vitorias * 3 ) + empates;
 
-	imprime("Torcedor: " + nome + "<br>" + "Seu time do coração é o (a): " + time + "<br>" + "Os total de pontos do seu time é de: " + pontos);
+		if(pontos > pontosAnosAnterior) {
+			pulaLinha()
+			imprime("O seu time está melhor que o ano passado.");
+		}
+
+		if(pontos == pontosAnosAnterior) {
+			pulaLinha()
+			imprime("O seu time está igual que o ano passado.");
+		}
+
+		if(pontos < pontosAnosAnterior){
+			pulaLinha()
+			imprime("O seu time está pior que o ano passado.");
+		}
+	
+
+
+	imprime("<br>" + "Torcedor: " + nome + "<br>" + "Seu time do coração é o (a): " + time + "<br>" + "Os total de pontos do seu time é de: " + pontos + "<br>" + "Derrotas: " + derrotas + "<br>" + "Empates: " + empates);
 
 </script>
