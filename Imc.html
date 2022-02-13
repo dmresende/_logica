@@ -9,36 +9,57 @@
 	alert("Que tal calcular o seu IMC ? ");
 
 	function imprime(mostra){
-
 		document.write(mostra);
-
 	}
 
 	function pularLinha(){
-
-		document.write("<br><br>");
-	}
+		document.write("<br><br>");	}
 
 	function calculaImc(altura,peso){
+		return peso / (altura * altura);
+	}
 
-		return peso / (altura * altura);		
+	var nome = prompt("Informe o seu nome: ");
+	alert("Se houver necessidade de separação das medidas use o ' . '  (Ponto ao invés de virgula) ");
+	var alturaInformada = prompt(nome + " informe a sua altura: ");
+	var pesoInformado = prompt(nome + " Informe o seu peso: ");
+	var imc = calculaImc(alturaInformada, pesoInformado);
+
+
+	
+	if(imc <= 18.5){
+		pularLinha()
+		imprime("Você está abaixo do recomendado!");
+
+	}else if(imc > 18.5 && imc <= 24.9) {
+		pularLinha()
+		imprime("Você está com o Peso Normal, Parabéns!!!!");
+
+	}else if(imc > 25 && imc <= 29.9){
+		pularLinha()
+		imprime("Você está com SOBREPESO !");
+
+	}else if(imc > 30 && imc<= 34.9){
+		pularLinha()
+		imprime("Você está Classificado com OBESIDADE GRAU 1 PELA OMS!");
+
+	}else if(imc >35 && imc<= 39.9){
+		pularLinha()
+		imprime("Você está Classificado com OBESIDADE GRAU 2 PELA OMS! ");
+
+	}else if(imc >= 40) {
+		pularLinha()
+		mostra("Você está Classificado com OBESIDADE GRAU 3 ou MORBIDA, PELA OMS, procure um médico!");
+
+	}
+	else {
+		pularLinha()
+		mostra("Informação não encontrada.");
 
 	}
 
-	/*var imcDouglas = calculaImc(1.68, 90);
-	var imcNatalia = calculaImc(1.72, 83);
-	var totalImc = imcDouglas + imcNatalia;
-	document.write("A soma dos imc's é: " + totalImc);*/
-
-	var nome = prompt("Informe o seu nome: ");
-	alert("Se houver necessidade de separação das medidas use o ' . '   ");
-	var alturaInformada = prompt(nome + " informe a sua altura: ");
-	var pesoInformado = prompt(nome + " Informe o seu peso: ");
-
-	var imc = calculaImc(alturaInformada, pesoInformado)
-
 	pularLinha();
-	imprime(nome + " o  IMC calculado é: " + imc);
+	imprime(nome + " o  seu IMC é de : " + imc);
 	pularLinha();
 
 	imprime("Obrigado por usar o nosso programa!");
