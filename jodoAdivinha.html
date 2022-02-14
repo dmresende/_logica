@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<h1>Jogo do Advinha!</h1> 
+
+<h3>Bem-Vindo ao Jogo Advinha Número!!!</h3>
+<h4>O número será gerado aleatoriamente de 0 à 10. </h4>
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br>");	
+	}
+
+	function mostra(imprime) {
+		document.write(imprime);
+	}
+
+	alert("Seja Bem - Vindo!");
+	var nome = prompt("Qual seu nome? ");
+	alert(nome + ", para jogar escolha um número de 0 à 10. Está pronto? ");
+
+	var numero = Math.round(Math.random() * 10);
+	var chute = parseInt(prompt("Chute um número? "));
+
+	if (chute == numero) {
+		mostra("Parabéns!!! Você acertou!");
+	} else{
+		mostra("Voce errou o número!");
+	}
+	
+
+
+</script>
