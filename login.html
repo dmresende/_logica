@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+
+<h1>I'm your Time Line!</h1>
+
+<h3>Exercício de login Alura</h3>
+
+
+<script>
+	
+	var loginCadastrado = "Douglas";
+	var senhaCadastrada = "123";
+
+	var ultimaTentativas = 999;
+	var tentativaAtual = 1;
+
+	while(tentativaAtual <= ultimaTentativas) {
+
+		var loginInformado = prompt("Informe seu [ Login ] ");
+		var senhaInformada = prompt("Informe sua [ Senha ]")
+
+		if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+
+			alert("Bem vindo!");
+
+			tentativaAtual = ultimaTentativas;
+
+		}else {
+
+			if (tentativaAtual == 999) {
+
+				alert("Numero de tentativas exedidas. ");
+			
+			} else {
+
+				alert("Login ou Senha incorretos, tente novamente: ");
+			}
+					
+		}
+		
+		tentativaAtual = tentativaAtual + 1;
+	}
+
+
+</script>
