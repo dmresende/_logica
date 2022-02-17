@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<h1>Jogo Adivinha</h1>
+<h4>Coloque ´seu chute e pressione o botão!</h4>
+
+<input/>
+<button>Compare com meu segredo</button>
+
+<script>
+	var segredo = Math.round(Math.random() * 10);
+	var input = document.querySelector("input"); //o nome da variável pode ser outro; porém dentro do parâmetro deve estar o mesmo nome;
+	input.focus();
+	function verifica(){
+
+		if (input.value == segredo) {
+
+			alert("Você ACERTOU!");
+		}else {
+
+			alert("Você ERROU!");
+		}
+		 input.value = ""; //limpa
+		 input.focus(); //foco
+	} 
+
+	var button = document.querySelector("Button"); 
+	button.onclick = verifica; //não fechando parentese passa os valores para botton.onclick;
+
+
+</script>
