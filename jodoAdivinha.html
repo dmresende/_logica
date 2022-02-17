@@ -13,20 +13,33 @@
 
 	function mostra(imprime) {
 		document.write(imprime);
+		pulaLinha();
 	}
 
 	alert("Seja Bem - Vindo!");
+
 	var nome = prompt("Qual seu nome? ");
+
 	alert(nome + ", para jogar escolha um número de 0 à 10. Está pronto? ");
 
 	var numero = Math.round(Math.random() * 10);
-	var chute = parseInt(prompt("Chute um número? "));
 
-	if (chute == numero) {
-		mostra("Parabéns!!! Você acertou!");
-	} else{
-		mostra("Voce errou o número!");
+	var tentativas = 1;
+
+	while(tentativas <= 3) {		
+		var chute = parseInt(prompt("Chute um número? "));
+
+		if (chute == numero) {
+			mostra("Parabéns!!! Você acertou!");
+			break;
+		} else{
+			mostra("Voce errou o número!");
+		  }
+		tentativas++;
 	}
+
+	mostra("FIM");
+
 	
 
 
